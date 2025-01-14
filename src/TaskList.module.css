@@ -1,0 +1,8 @@
+.ListItem{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+}
+.Completed{
+    text-decoration:line-through;
+}

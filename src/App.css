@@ -1,0 +1,26 @@
+.App {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(68, 68, 68);
+}
+.header {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  text-align: center; /* Center-align the text */
+  padding: 20px; /* Add padding for spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: sticky; /* Keeps header at the top during scroll */
+  top: 0; /* Sticky position starts at top */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+.header-title {
+  font-size: 2.5rem; /* Large font for title */
+  margin: 0; /* Remove default margin */
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem; /* Adjust title font size for smaller screens */
+  }
+}

@@ -1,0 +1,28 @@
+.Filter {
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+  padding: 10px 0;
+  margin: 20px 0;
+  text-align: center;
+}
+.Button {
+  background-color: white;
+  color: #4caf50;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.Button:hover {
+  border: #4caf50 4px solid;
+  transform: scale(1.01);
+  padding: 9px 19px;
+
+}
+.Button.Active {
+  background-color: #4caf50;
+  color: white;
+}

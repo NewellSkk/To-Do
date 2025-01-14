@@ -1,0 +1,24 @@
+.Form{
+    margin:20px 0;
+}
+.Input{
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+.Button{
+    margin-left: 10px;
+    padding:10px;
+    border: white 2px solid;
+    border-radius: 4px;
+    color: white;
+    background-color: rgba(0,0,0,0);
+    font-weight: bolder;
+}
+
+.Button:hover{
+    color:#4caf50;
+    border: #4caf50 2px solid;
+}
+.Label{
+    color: white;}
