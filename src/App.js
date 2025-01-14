@@ -6,7 +6,7 @@ import Filter from "./Filter";
 
 function App() {
   const [items, setItems] = useState([]);
-  const [filter, setFilter] = useState("all"); //FILTER BETWEEN 'ALL','COMPLETE','PENDING'
+  const [filter, setFilter] = useState("all"); 
 
   const addItemHandler = (text, category) => {
     const newItem = {
@@ -26,12 +26,18 @@ function App() {
     ?items.filter(item=>!item.completed)
     :items;
 
-    // TOGGLE ITEM BETWEEN COMPLETE AND PENDING
+    // TOGGLE ITEM BETWEEN "ALL" "COMPLETE" AND "PENDING"
   const toggleHandler = (id) => {
     setItems(
       items.map((item) => item.id === id ? { ...item, completed: !item.completed } : item
     ));
   };
+
+  //DELETING AN ITEM FROM THE LIST
+  const deleteHandler=(id)=>{
+    let alteredItems=items.filter(item=>item.id!==id);
+    setItems(alteredItems)
+  }
   return (
     <div className="App">
       <header className="header">
@@ -39,7 +45,7 @@ function App() {
       </header>
       <TaskInput onAddItem={addItemHandler} />
       <Filter filter={filter} setFilter={setFilter}/>
-      <TaskList items={filterResult} toggleItem={toggleHandler} />
+      <TaskList items={filterResult} toggleItem={toggleHandler} deleteItem={deleteHandler} />
     </div>
   );
 }
