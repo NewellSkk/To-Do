@@ -1,105 +1,127 @@
-.CategoryHeader{
-    margin-bottom: 2px;
+.CategorySection {
+  margin-bottom: 10px;
+  min-width: 25%;
+  justify-self: center;
+  border-radius: 8px;
+  background-color: rgba(5, 248, 106, 0.1);
+  border-left: 6px solid #4caf50;
 }
-.CategoryHeader h3{
-    color:#4caf50;
-    font-size: 2.5rem;
-    font-weight:bold;
-    margin: auto;
+
+.CategorySection h3 {
+  color: #4caf50;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: auto;
 }
-.CategoryHeader h3.Work {
+.CategorySection.Work {
+  border-left: 6px solid rgb(255, 0, 0);
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.CategorySection.Work h3 {
   color: rgb(255, 0, 0);
 }
-
-.CategoryHeader h3.Personal {
-  color: rgb(4, 128, 173);
+.CategorySection.Personal {
+  border-left: 6px solid rgb(6, 108, 145);
+  background-color: rgba(6, 108, 145, 0.1);
 }
-
-.CategoryHeader h3.Shopping {
+.CategorySection.Personal h3 {
+  color: rgb(6, 108, 145);
+}
+.CategorySection.Shopping {
+  border-left: 6px solid rgb(240, 0, 240);
+  background-color: rgba(240, 0, 240, 0.1);
+}
+.CategorySection.Shopping h3 {
   color: rgb(240, 0, 240);
 }
-.CategoryList{
-    list-style-type:none;
-    padding: 0;
-    margin: 2px;
+.CategoryList {
+  list-style-type: none;
+  padding: 0;
+  margin: 2px;
 }
-.ListItem{
-    padding: 2px;
-    color: #ccc;
-    margin: auto;
+.ListItem {
+  padding: 2px;
+  color: #ccc;
+  margin: auto;
 }
-.CheckboxContainer{
-    display: flex;
+.CheckboxContainer {
+  display: flex;
   align-items: center;
   cursor: pointer;
-justify-content: center;
+  justify-content: start;
 }
-.CheckboxContainer input[type='checkbox']{
-    display: none;
+.CheckboxContainer input[type="checkbox"] {
+  display: none;
 }
-.Checkbox{
-    width: 20px;
+.Checkbox {
+  width: 20px;
   height: 20px;
   margin-right: 5px;
   border: 2px solid #4caf50;
   border-radius: 4px;
   position: relative;
   background-color: #fff;
-  transition: background-color 0.5s ease, transform 0.5s ease; 
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 .Checkbox::after {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    top: 3px;
-    left: 7px;
-    transform: scale(0) rotate(45deg);
-    transition: transform 0.5s ease;
-  }
-  .CheckboxContainer input[type="checkbox"]:checked + .Checkbox {
-    background-color: #4caf50;
-  }
-  .CheckboxContainer input[type="checkbox"]:checked + .Checkbox::after {
-    transform: scale(1) rotate(45deg);
-  }
-.Completed{
-    text-decoration:line-through;
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 3px;
+  left: 7px;
+  transform: scale(0) rotate(45deg);
+  transition: transform 0.5s ease;
 }
-.Delete{
-    background-color: rgba(0,0,0,0);
-    border: none;
-    color: rgb(255, 0, 0);
-    font-size: small;
-    font-weight: bold;
-    border-radius: 4px;
+.CheckboxContainer input[type="checkbox"]:checked + .Checkbox {
+  background-color: #4caf50;
+}
+.CheckboxContainer input[type="checkbox"]:checked + .Checkbox::after {
+  transform: scale(1) rotate(45deg);
+}
+.Completed {
+  text-decoration: line-through;
+}
+.Delete {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgb(255, 0, 0);
+  font-size: small;
+  font-weight: bold;
+  border-radius: 4px;
 }
 @keyframes blink {
-    0%, 100% {
-      color: red;
-      background-color: white;
-    }
-    50% {
-      color: white;
-      background-color: red;
-    }
+  0%,
+  100% {
+    color: red;
+    background-color: white;
   }
-  
-  /* Add hover effect */
-  .Delete:hover {
-    animation: blink 1.5s infinite; /* 0.8s duration, repeats infinitely */
+  50% {
+    color: white;
+    background-color: red;
   }
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .ListItem{animation: fadeIn 04s ease;}
+}
 
+/* Add hover effect */
+.Delete:hover {
+  animation: blink 1.5s infinite; /* 0.8s duration, repeats infinitely */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ListItem {
+  animation: fadeIn 04s ease;
+}
+@media (max-width: 768px) {
+  .CategorySection {  min-width: 70%;
+  }
+}
