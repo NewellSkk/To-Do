@@ -15,7 +15,7 @@ const TaskList = ({ items, toggleItem,deleteItem }) => {
     {/* MAPPING CATEGORIES & NESTED MAPPING OF CATEGORY ITEMS */}
       {Object.keys(dividedTasks).map((category) => (
         <div key={category} className={Styles.CategoryHeader}>
-          <h3>{category}</h3>
+          <h3 className={`${Styles[category]}`}>{category}</h3>
           <ul className={Styles.CategoryList}>
             {dividedTasks[category].map((item) => (
               <li

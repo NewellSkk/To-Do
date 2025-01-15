@@ -7,6 +7,17 @@
     font-weight:bold;
     margin: auto;
 }
+.CategoryHeader h3.Work {
+  color: rgb(255, 0, 0);
+}
+
+.CategoryHeader h3.Personal {
+  color: rgb(4, 128, 173);
+}
+
+.CategoryHeader h3.Shopping {
+  color: rgb(240, 0, 240);
+}
 .CategoryList{
     list-style-type:none;
     padding: 0;
